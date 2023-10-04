@@ -28,15 +28,23 @@ let a = Number(prompt("Enter THE number"));
 let b = Number(prompt("Enter another number"));
 add(a, b); */
 
+
+let x = Number(prompt("Enter your weight (KG)"));
+let y = Number(prompt("Enter your height (m)"));
+
+
 function add(x,y){
     //creates an output
-    return x + y;
 }
 
-const sum = add(45, 34);
 
-function calc() {
-    const sum = add(45, 34);
-    console.log(sum);
+
+
+function BMI(x,y){
+    const mult = add(x / (y*y));
+    console.log(mult)
 }
-calc();
+
+
+BMI();
+//BMI = weight(kg) / height(m)^2
