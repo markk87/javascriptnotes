@@ -27,24 +27,29 @@ function add(x,y) {
 let a = Number(prompt("Enter THE number"));
 let b = Number(prompt("Enter another number"));
 add(a, b); */
+function calculateBMI(x,y){
+    return x/(y * y) * 703;
+}
+function getBMI(){
+    const height = prompt('height');
+    const weight = prompt('weight');
 
+    console.log(calculateBMI(weight,height));
+  
+}
 
-let x = Number(prompt("Enter your weight (KG)"));
-let y = Number(prompt("Enter your height (m)"));
+getBMI();
 
+let z = getBMI();
+if(z <= 18.5) {
+    console.log("You're underweight")
 
-function add(x,y){
-    //creates an output
+}
+if (z >= )
+else {
+    console.log("You're healthy")
 }
 
 
 
-
-function BMI(x,y){
-    const mult = add(x / (y*y));
-    console.log(mult)
-}
-
-
-BMI();
 //BMI = weight(kg) / height(m)^2
