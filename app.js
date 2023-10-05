@@ -27,28 +27,31 @@ function add(x,y) {
 let a = Number(prompt("Enter THE number"));
 let b = Number(prompt("Enter another number"));
 add(a, b); */
-function calculateBMI(x,y){
+function calculateBMI(x,y) {
     return x/(y * y) * 703;
 }
-function getBMI(){
+function getBMI() {
     const height = prompt('height');
     const weight = prompt('weight');
 
     console.log(calculateBMI(weight,height));
-  
+    
+    if(calculateBMI(weight,height) < 18.5) {
+        console.log("You're underweight");
+    
+    }
+
+    if (calculateBMI(weight,height) >= 24.9 ) {
+        console.log("You're like Sam!");
+    }
+    else {
+        console.log("You're healthy!");
+    }
+    
 }
 
 getBMI();
 
-let z = getBMI();
-if(z <= 18.5) {
-    console.log("You're underweight")
-
-}
-if (z >= )
-else {
-    console.log("You're healthy")
-}
 
 
 
