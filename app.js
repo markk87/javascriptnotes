@@ -39,14 +39,22 @@ function getBMI() {
     if(calculateBMI(weight,height) < 18.5) {
         console.log("You're underweight");
     
+     } else if(calculateBMI(weight, height) < 24.9) {
+        console.log("You're healthy!");
+     }
+     
+     
+     
+if (calculateBMI(weight,height) >= 24.9 ) {
+            console.log("You're like Sam!");
+        }
+    
+    
+    
+else {
+        console.log("You're very healthy!")
     }
 
-    if (calculateBMI(weight,height) >= 24.9 ) {
-        console.log("You're like Sam!");
-    }
-    else {
-        console.log("You're healthy!");
-    }
     
 }
 
