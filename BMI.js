@@ -1,32 +1,29 @@
 const user = {
-    name: Josh,
+    name: "Josh",
     heightCM: 152,
-    weightKg: 70,
+    weightKg: 52.62
 };
 
 
 
-
-
-function getBMI(w, h) {
-    return w/(h * h) * 10000;
+function getBMI(user) {
+    const heightM = user.heightCM / 100;
+    const bmi = user.weightKg / (heightM * heightM);
+    return bmi;
 }
 
-function BMI() {
-    const height = Number(prompt("What is your height in inches?"));
-    const weight = Number(prompt("What is your weight in pounds?"));
-
-    console.log(getBMI(weight, height));
-
-    if (getBMI(weight, height) > 24.9 ) {
-        console.log("You are overweight");
-    } else if (getBMI(weight, height) < 18.5) {
-        console.log("You are underweight");
-    } else if (getBMI(weight, height) > 18.5 || getBMI(weight, height) < 24.9) {
-        console.log("You are one healthy mothafucka");
+function tellBMI(bmi) {
+    if (bmi < 18.5) {
+        return "You are underweight";
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        return "You are at a healthy weight";
+    } else {
+    return "You are overweight";
     }
 }
 
-const userBMI = cal
+const userBMI = getBMI(user);
+const tell = tellBMI(userBMI);
 
-BMI();
+
+console.log (`${user.name}'s BMI is' ${userBMI.toFixed(1)} - ${tell}`);
