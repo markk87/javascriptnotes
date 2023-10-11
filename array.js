@@ -1,39 +1,33 @@
     const students = [
      {
-         firstName: "Mark",
+         firstName: "Marky",
          lastName: "Kleyman",
          graduated: true,
-         number: [1]
+         number: [1000]
      },
      {
-         firstName: "Paul",
+         firstName: "Pavlik",
          lastName: "Mkaicja",
-         graduated: false
+         graduated: false,
+         number: [1001]
      },
      {
         firstName: "Josh",
          lastName: "Rovenskyyyyy",
-         graduated: true
+         graduated: true,
+         number: [1002]
      }
  ];
- students.forEach((name) => console.log(name.firstName));
 
- const graduates = students.filter((student) => student.graduated === true);
+students.forEach((imena) => console.log(imena.firstName + " " + imena.lastName));
+
+
+
+ students.forEach((number) => {
+    number.number.forEach((numero)=> {
+        console.log(numero)
+    })
+ });
+
+ const graduates = students.filter((nombre) => nombre.graduated === true );
  console.log(graduates);
-
-
-const words = ['hello', 'kleyman', 'APCS', 'computer', 'batman'];
-
-const result = words.filter((word) => word.length > 5);
-
-console.log(result);
-
-words.forEach((print) => console.log(print));
-
-// example.forEach((result) => {
-//     //iterate through the array and run function on each element
-//     //pass each element into the function as parameters
-//     console.log(result);
-
-// })
-
