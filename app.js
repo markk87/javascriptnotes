@@ -1,32 +1,32 @@
-// for(i = 0; i <= 7; i+=2){
-//     console.log(i);
+// function greet(name){
+//     const greetPromise = new Promise(function(resolve, reject) {
+//         resolve(`Hello ${name}`)
+// });
+// return greetPromise;
 // }
 
-// while(i<7){
-//     console.log(i);
-//     i++;
-// }
+// const Aaron = greet("Aaron");
+// console.log(Aaron);
+// //do NOT use .then
+// Aaron.then((result) => {
+//     console.log(result);
+// })
 
+//REST API - Relation State Tranfer Application Programming Interface
 
-// function spaces(s, y, t) {
-//     let total = 0;
-//     for(let i = 0; i <= s; i++){
-//         if(y[i] === "C" && t[i] === "C") {
-//             total++;
-//         }
-//     }
-//     console.log(total);
-// }
+const URL = `https://api.favqs.com/api/qotd`
 
-// spaces(5, "CC..C", ".CC..");
-
-function sequence(previous, next, end) {
-    for(let i = 0; i <= end; i++){
-        console.log(previous);
-        nextSeq = previous + next
-        previous = next
-        next = nextSeq
+async function getData(URL) {
+    try {
+        const response = await fetch(URL);
+        console.log(response);
+        const data = await response.json();
+        console.log(data);
+        document.querySelector("h1").textContent = data.content
+        document.querySelector("h2").textContent = data.author
+    } catch (error) {
+        
     }
+    
 }
-
-sequence(0, 1, 10);
+getData(URL);
